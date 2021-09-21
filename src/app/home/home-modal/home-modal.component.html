@@ -1,0 +1,32 @@
+<div style="width: 100%; display: flex; flex-direction: row;">
+    <div style="flex-direction: column; width: 14%; white-space: nowrap;">
+        <h3><b>Num: # {{dados.id}}</b></h3>
+    </div>
+    <div style="flex-direction: column; width: 10%; margin-right: 10px; margin-top: 7px;"><img style="margin-top: -35px; width: 80px; height: 80px;" [src]="dados.sprites.front_default"></div>
+    <div style="flex-direction: column; width: 10%;">
+        <h3><b>{{dados.name}}</b></h3>
+    </div>
+</div>
+<div class="div_row">
+    <div style="flex-direction: column; width: 50%; margin-right: 35px;"><img style="width: 300px; height:300px" [src]="dados.sprites.other.dream_world.front_default">
+    </div>
+    <div class="div_col">
+        <div style="width: 100%; display: flex; flex-direction: row; text-align: left;">
+            <div class="div_col"><b>Type:</b></div>
+            <div class="div_col" *ngFor="let type of dados.types"><b>{{type.type.name}}</b></div>
+        </div>
+        <div style="width: 100%; display: flex; flex-direction: row; text-align: left;">
+            <div class="div_col"><b>Abilities:</b></div>
+            <div class="div_col" *ngFor="let ability of dados.abilities"><b>{{ability.ability.name}}</b></div>
+        </div>
+        <div class="div_inner_row">
+            <p><b>Height: {{dados.height}}</b></p>
+        </div>
+        <div class="div_inner_row">
+            <p><b>Weight: {{dados.weight}}</b></p>
+        </div>
+        <div class="div_inner_row" *ngFor="let stat of dados.stats">
+            <p><b>{{stat.stat.name}}: {{stat.base_stat}}</b></p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+.div_row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 10px;
+}
+.div_col {
+    flex-direction: column;
+    width: 50%;
+}
+.div_inner_row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.div_inner_col {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 26px;
+}
